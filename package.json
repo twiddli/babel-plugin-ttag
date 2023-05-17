@@ -1,0 +1,59 @@
+{
+  "name": "babel-plugin-ttag",
+  "version": "1.8.5",
+  "description": "",
+  "main": "dist/plugin.js",
+  "keywords": [
+    "gettext",
+    "translations",
+    "babel-plugin",
+    "i18n"
+  ],
+  "scripts": {
+    "test": "make test",
+    "lint": "eslint ./src ./tests",
+    "fix": "eslint --fix ./src ./tests",
+    "build": "babel src --out-dir dist",
+    "preversion": "npm run lint && npm run build && make test",
+    "prepublish": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ttag-org/babel-plugin-ttag.git"
+  },
+  "author": "alexander",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ttag-org/babel-plugin-ttag/issues"
+  },
+  "homepage": "https://github.com/ttag-org/babel-plugin-ttag#readme",
+  "dependencies": {
+    "@babel/generator": "^7.12.5",
+    "@babel/template": "^7.10.4",
+    "@babel/types": "^7.12.6",
+    "ajv": "6.12.3",
+    "babel-plugin-macros": "^2.8.0",
+    "dedent": "0.6.0",
+    "gettext-parser": "6.0.0",
+    "mkdirp": "^1.0.4",
+    "plural-forms": "^0.5.3"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.12.1",
+    "@babel/core": "^7.12.3",
+    "@babel/plugin-proposal-class-properties": "^7.12.1",
+    "@babel/preset-env": "^7.12.1",
+    "@babel/preset-react": "^7.12.5",
+    "@babel/register": "^7.12.1",
+    "babel-eslint": "^10.1.0",
+    "chai": "3.5.0",
+    "eslint": "^7.2.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-react": "^7.21.5",
+    "eslint-plugin-react-hooks": "^4.0.0",
+    "istanbul": "1.1.0-alpha.1",
+    "mocha": "^7.2.0"
+  }
+}
